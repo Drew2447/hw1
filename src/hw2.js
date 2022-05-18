@@ -12,6 +12,8 @@
  * @returns {undefined}
  */
  const addItemToArray = (arr, item, index)=>{
+   arr.splice(index,0,item)
+   
    //TODO
 }
 
@@ -23,6 +25,10 @@
  * @returns {array} a new array with item added
  */
 const addItemToANewArray=(arr, item, index)=>{
+   let newArr = [...arr]
+   console.log(newArr)
+   newArr.splice(index, 0, item)
+   return (newArr)
      //TODO
 }
 

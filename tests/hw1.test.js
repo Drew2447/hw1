@@ -82,7 +82,7 @@ import {
     expect(returnValue2).toBe(4);
   });
   
-  it("test getLow", () => {
+  it("test getLowNum", () => {
     let returnValue1 = getLowNum([1, 2, 3]);
     let returnValue2 = getLowNum([4, 2, 1, -1]);
   
