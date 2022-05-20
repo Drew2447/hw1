@@ -1,4 +1,5 @@
 const exp = require("constants");
+const { user2 } = require("./data");
 
 const characters = [
   {
@@ -100,14 +101,57 @@ let massHeight = characters.filter((peop1)=>{
   
 })
 //Get all male characters
-let massGen = characters.filter((peop1)=>{
-  
-  return peop1.gender==female
-})  
+//let male = gender.filter(male => gender.length < 5 );
+const getMen =(list)=>{
+  return list.filter(peop=>{
+  return peop.gender == 'male'
+  })
+}
 
+const getfeMale =(list)=>{
+  return list.filter(peop=>{
+  return peop.gender == 'female'
+  })
+}
 //console.log(massGreat)
 //console.log(massHeight)
-console.log(massGen)
+// console.log(getMen(characters))
+// console.log(getfeMale(characters))
+
+//Sort by name
+let massname = characters.sort((user,user2)=> {
+  if (user.name < user2.name)
+  {return -1}
+  }
+)
+
+//Sort by mass
+
+const sortMass = ()=>{
+  return characters.sort((a,b)=>{
+    return a.mass - b.mass
+
+  })
+}
+
+//Sort by height
+const sortHeight = ()=>{
+  return characters.sort((a,b)=>{
+    return a.height - b.height
+  })
+}
+
+let sortGender = characters.sort((user,user2)=> {
+  if (user.gender < user2.gender)
+  {return -1}
+  }
+)
+
+console.log(sortGender)
+//console.log(sortHeight())
+//console.log(sortMass())
+// console.log(massname)
+
 
 
 // MAP
