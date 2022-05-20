@@ -147,13 +147,66 @@ let sortGender = characters.sort((user,user2)=> {
   }
 )
 
-console.log(sortGender)
+// console.log(sortGender)
 //console.log(sortHeight())
 //console.log(sortMass())
 // console.log(massname)
 
+// Does every character have blue eyes?
+const checkEye =()=>{
+  return characters.every((e)=>{
+    return e.eye_color
+  })
+}
+
+const checkMass =()=>{
+  return characters.every((e)=>{
+    return e.mass>40
+  })
+}
+
+const checkHeight =()=>{
+  return characters.every((e)=>{
+    return e.height<200
+  })
+}
+ 
+const checkGender =()=>{
+  return characters.every((e)=>{
+    return e.gendar === 'male'
+  })
+}
+//   console.log(checkEye())
+//   console.log(checkMass())
+//   console.log(checkHeight())
+//   console.log(checkGender())
+
+// Is there at least one male character?
+// Is there at least one character with blue eyes?
+// Is there at least one character taller than 200?
+// Is there at least one character that has mass less than 50?
+
+const someMale =(arg, arg2) =>{
+  return characters.some((c)=>{
+    return c[arg == arg2]
+  })
+}
 
 
+const someBlue =(arg, arg2) =>{
+  return characters.some((c)=>{
+    return c[arg == arg2]
+  })
+}
+const someTall =(arg, arg2) =>{
+  return characters.some((c)=>{
+    return c[arg == arg2]
+  })
+}
+
+console.log(someMale('male'))
+console.log(someBlue('blue'))
+console.log(someTall('height'> 200))
 // MAP
 // Get an array of all names
 // Get an array of all heights
