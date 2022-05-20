@@ -40,6 +40,7 @@ const addItemToANewArray=(arr, item, index)=>{
  * @returns {undefined}
  */
  const replaceItemToArray = (arr, item, index)=>{
+   arr.splice(index, 1, item)
        //TODO
 }
 
@@ -51,6 +52,9 @@ const addItemToANewArray=(arr, item, index)=>{
  * @returns {array} a new array with item added
  */
 const replaceItemToANewArray=(arr, item, index)=>{
+   const newarr = [... arr]
+   newarr.splice(index, 1, item)
+   return (newarr)
    //TODO
 }
 

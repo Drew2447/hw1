@@ -1,7 +1,7 @@
 //function that takes a number and doubles it
 // yarn jest -t 'test doubleNumber'
 const doubleNumber = (num) => {
-  
+  num * 2
   return num;
   
 };
